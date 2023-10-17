@@ -6,7 +6,7 @@ from model import create_model
 from timeit import default_timer as timer
 from typing import Tuple, Dict
 
-with open(foodvision_101_class_names_path, "r") as f:
+with open(class_names.txt, "r") as f:
   class_names = [i.strip() for i in  f.readlines()] 
 
 model, auto_transforms = create_model(len(class_names))
